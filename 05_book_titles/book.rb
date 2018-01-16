@@ -1,11 +1,11 @@
 class Book
 
-  attr_writer :booktitle
+  attr_writer :title
 
 def title
-  booktitle = :booktitle
-  result = booktitle.split.map! { |string| 
-  	if (string == "and" || string == "the" || string == "over")
+
+  result = @title.split.map! { |string| 
+  	if (string == "and" || string == "the" || string == "over" || string == "a" || string == "an" || string == "of" || string == "in" || string == "20")
   	string 
     else 
   	string.capitalize!
@@ -14,13 +14,7 @@ def title
   }
   result[0].capitalize!
   result.join(" ")
-
  end
 
 
 end
-
-new_book = Book.new
-new_book.booktitle = "salut les copains"
-
-print new_book.title
