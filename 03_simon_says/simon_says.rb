@@ -10,16 +10,8 @@ end
 
 # On définit repeat en forçant 2 en default value (on part du principe qu'on répète au moins deux fois !)
 def repeat(word, time=2)	
-
-# Si l'utilisateur ne remplit pas de paramètre, on prend 2 par défaut
-  return word + " " + word if time == 2
-
-# Sinon, on répète autant de fois que voulu le mot saisi 
   result = word
-  i = 1
-  i.upto(time-1) do 
-  result = result + " " + word
-  i += 1
+  (time-1).times do result += " " + word
   end
   result
 end
@@ -29,8 +21,8 @@ def start_of_word(word, letters)
   result = ""
   i = 0
   i.upto(letters-1) do
-  result = result + word[i]	
-  i = i + 1
+  result += word[i]	
+  i += 1
   end
   result
 end
@@ -54,8 +46,6 @@ def titleize(word)
   result[0].capitalize!
   result.join(" ")
 end
-
-print titleize ("salut les copains")
 
 
 

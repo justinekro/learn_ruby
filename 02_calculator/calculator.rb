@@ -33,8 +33,8 @@ def factorial(num)
   result = 1
   i = 1
   1.upto(num) do 
-  result = result * i
-  i = i + 1
+  result *= i
+  i += 1
   end
   result
 
