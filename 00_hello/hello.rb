@@ -1,1 +1,11 @@
-#write your code here
+class temperature
+
+  def hello
+    "Hello!"
+  end
+
+  def greet(who)
+    "Hello, #{who}!"
+  end
+
+end
