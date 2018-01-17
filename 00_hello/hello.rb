@@ -1,5 +1,3 @@
-class temperature
-
   def hello
     "Hello!"
   end
